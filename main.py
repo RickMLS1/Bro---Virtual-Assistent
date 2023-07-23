@@ -57,7 +57,7 @@ def assistente_virtual():
         # Por exemplo, você pode adicionar lógica para responder a perguntas específicas, fornecer informações,
         # executar cálculos, definir lembretes, etc.
         elif "parar" in comando:
-            falar("Ok, lindo!")
+            falar("Tranquilidade, lindo, beijo!")
             break
         
 
