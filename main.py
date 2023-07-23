@@ -28,7 +28,7 @@ def falar(texto):
     engine.runAndWait()
 
 def obter_clima(cidade):
-    chave_api = "0d08ade5e3fa06c027beafbf0e199e80"
+    chave_api = ";)"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={chave_api}&units=metric"
     resposta = requests.get(url)
     dados = resposta.json()
