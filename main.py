@@ -1,3 +1,4 @@
+from googlesearch import search
 import speech_recognition as sr
 import pyttsx3
 import pyaudio
@@ -40,25 +41,45 @@ def obter_clima(cidade):
     else:
         falar("Não foi possível obter as informações sobre o clima. Por favor, tente novamente mais tarde.")
 
+def pesquisar_web(query):
+    try:
+        resultados = search(query, num_results=3, lang='pt')
+        if resultados:
+            falar("Aqui estão alguns resultados da pesquisa:")
+            for i, resultado in enumerate(resultados, start=1):
+                falar(f"Resultado {i}: {resultado}")
+        else:
+            falar("Desculpe, não encontrei nenhum resultado para essa pesquisa.")
+    except Exception as e:
+        falar("Desculpe, ocorreu um erro ao realizar a pesquisa.")
+
+def responder_pergunta(pergunta):
+    # Adicione aqui a lógica para responder a perguntas específicas do usuário.
+    # Por exemplo, você pode adicionar respostas pré-definidas para perguntas frequentes.
+
+    # Exemplo de resposta para uma pergunta específica:
+    if "qual é a capital do Brasil" in pergunta:
+        falar("A capital do Brasil é Brasília.")
+    else:
+        pesquisar_web(pergunta)
+
 def assistente_virtual():
     falar("Olá! Sou o Bro. Como posso ajudar?")
     
     while True:
         comando = ouvir_microfone().lower()
         
-        if "bom dia" in comando:
-            falar("Bom dia, gato, vamos começar o show?")
-
+        if "valeu" in comando:
+            falar("Suave, meu parceiro!")
+            break
         elif "clima" in comando:
             falar("Claro! Para qual cidade você deseja saber o clima?")
             cidade = ouvir_microfone()
             obter_clima(cidade)
-        # Adicione aqui as respostas e ações do assistente virtual com base nos comandos detectados.
-        # Por exemplo, você pode adicionar lógica para responder a perguntas específicas, fornecer informações,
-        # executar cálculos, definir lembretes, etc.
-        elif "parar" in comando:
-            falar("Tranquilidade, lindo, beijo!")
-            break
+        else:
+            falar("Desculpe, não entendi. Poderia repetir ou fazer outra pergunta?")
+            pergunta = ouvir_microfone()
+            responder_pergunta(pergunta)
         
 
 if __name__ == "__main__":
