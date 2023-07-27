@@ -70,7 +70,7 @@ def assistente_virtual():
         comando = ouvir_microfone().lower()
         
         if "valeu" in comando:
-            falar("Suave, meu parceiro!")
+            falar("Tranquilo meu parceiro!")
             break
         elif "clima" in comando:
             falar("Claro! Para qual cidade você deseja saber o clima?")
