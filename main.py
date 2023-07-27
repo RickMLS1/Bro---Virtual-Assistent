@@ -55,9 +55,9 @@ def pesquisar_web(query):
 
 # Aqui serão adicionadas respostas pré-definidas para perguntas frequentes.
 def responder_pergunta(pergunta): 
-    # Adicione aqui a lógica para responder a perguntas específicas do usuário.
+    # Adicione aqui a lógica para responder a perguntas específicas.
     # Resposta para uma pergunta específica:
-    if "qual é a capital do Brasil" in pergunta:
+    if "qual o maior clube do brasil" in pergunta:
         falar("A capital do Brasil é Brasília.")
     else:
         pesquisar_web(pergunta)
