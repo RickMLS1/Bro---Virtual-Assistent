@@ -19,7 +19,7 @@ Assistente virtual construído na linguagem **Python**
 * Notícias atualizadas
 * Envio de e-mails ou mensagens
 * Perguntas sobre curiosidades e fatos interessantes
-* Integração com APIs de serviços populares
+* Integração com APIs
 
 ### Bibliotecas utilizadas
 
