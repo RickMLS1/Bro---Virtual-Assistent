@@ -11,7 +11,7 @@ Assistente virtual construído na linguagem **Python**
 ### Funcionalidades: 
 
 * Informar o clima
-* Pesquisar na web e exibir os resultados
+* Pesquisar na web e exibir os resultados (também responde algumas perguntas pŕe definidas)
 
 ### Funcionalidades a serem implementadas: 
 
