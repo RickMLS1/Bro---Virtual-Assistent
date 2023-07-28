@@ -53,12 +53,11 @@ def pesquisar_web(query):
     except Exception as e:
         print("Desculpe, ocorreu um erro ao realizar a pesquisa.")
 
-def responder_pergunta(pergunta):
-    # Adicione aqui a lógica para responder a perguntas específicas do usuário.
-    # Por exemplo, você pode adicionar respostas pré-definidas para perguntas frequentes.
-
-    # Exemplo de resposta para uma pergunta específica:
-    if "qual é a capital do Brasil" in pergunta:
+# Aqui serão adicionadas respostas pré-definidas para perguntas frequentes.
+def responder_pergunta(pergunta): 
+    # Adicione aqui a lógica para responder a perguntas específicas.
+    # Resposta para uma pergunta específica:
+    if "qual o maior clube do brasil" in pergunta:
         falar("A capital do Brasil é Brasília.")
     else:
         pesquisar_web(pergunta)
