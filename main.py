@@ -45,13 +45,13 @@ def pesquisar_web(query):
     try:
         resultados = search(query, num_results=3, lang='pt')
         if resultados:
-            falar("Aqui estão alguns resultados da pesquisa:")
+            print("Aqui estão alguns resultados da pesquisa:")
             for i, resultado in enumerate(resultados, start=1):
-                falar(f"Resultado {i}: {resultado}")
+                print(f"Resultado {i}: {resultado}")
         else:
-            falar("Desculpe, não encontrei nenhum resultado para essa pesquisa.")
+            print("Desculpe, não encontrei nenhum resultado para essa pesquisa.")
     except Exception as e:
-        falar("Desculpe, ocorreu um erro ao realizar a pesquisa.")
+        print("Desculpe, ocorreu um erro ao realizar a pesquisa.")
 
 def responder_pergunta(pergunta):
     # Adicione aqui a lógica para responder a perguntas específicas do usuário.
