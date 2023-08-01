@@ -17,7 +17,7 @@ Assistente virtual construído na linguagem **Python**
 
 * Reprodução de música ou podcasts
 * Notícias atualizadas
-* Envio de e-mails ou mensagens
+* Envio automático de e-mails ou mensagens
 * Perguntas sobre curiosidades e fatos interessantes
 * Integração com APIs
 
