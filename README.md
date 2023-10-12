@@ -6,18 +6,18 @@ Protótipo de assistente virtual
 
 ## Linguagem utilizada
 
-Assistente virtual construído na linguagem **Python**
+**Python**
 
 ### Funcionalidades: 
 
 * Informar o clima
-* Pesquisar na web e exibir os resultados
+* Pesquisar na web e exibir os resultados (também responde algumas perguntas pŕe definidas)
 
 ### Funcionalidades a serem implementadas: 
 
 * Reprodução de música ou podcasts
 * Notícias atualizadas
-* Envio de e-mails ou mensagens
+* Envio automático de e-mails ou mensagens
 * Perguntas sobre curiosidades e fatos interessantes
 * Integração com APIs
 
@@ -27,3 +27,4 @@ Assistente virtual construído na linguagem **Python**
 * pyttsx3
 * googlesearch-python
 * requests
+* pyaudio
