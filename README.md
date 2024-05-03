@@ -6,7 +6,7 @@ Protótipo de assistente virtual
 
 ## Linguagem utilizada
 
-**Python**
+Assistente virtual construído na linguagem **Python**
 
 ### Funcionalidades: 
 
