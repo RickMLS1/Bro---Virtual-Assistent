@@ -12,6 +12,7 @@ Assistente virtual construído na linguagem **Python**
 
 * Informar o clima
 * Pesquisar na web e exibir os resultados (também responde algumas perguntas pŕe definidas)
+* Abrir o YouTube por comando de voz
 
 ### Funcionalidades a serem implementadas: 
 
@@ -27,3 +28,4 @@ Assistente virtual construído na linguagem **Python**
 * pyttsx3
 * googlesearch-python
 * requests
+* webbrowser
