@@ -3,6 +3,7 @@ import speech_recognition as sr
 import pyttsx3
 import pyaudio
 import requests
+import webbrowser
 
 def ouvir_microfone():
     reconhecedor = sr.Recognizer()
@@ -53,11 +54,13 @@ def pesquisar_web(query):
     except Exception as e:
         print("Desculpe, ocorreu um erro ao realizar a pesquisa.")
 
-# Aqui serão adicionadas respostas pré-definidas para perguntas frequentes.
-def responder_pergunta(pergunta): 
-    # Adicione aqui a lógica para responder a perguntas específicas.
-    # Resposta para uma pergunta específica:
-    if "qual o maior clube do brasil" in pergunta:
+def reproduzir_musica(musica):
+    query = musica.replace(" ", "+")
+    url = f"https://www.youtube.com/results?search_query={query}"
+    webbrowser.open(url)
+
+def responder_pergunta(pergunta):  
+    if "qual a capital do brasil?" in pergunta:
         falar("A capital do Brasil é Brasília.")
     else:
         pesquisar_web(pergunta)
@@ -75,6 +78,11 @@ def assistente_virtual():
             falar("Claro! Para qual cidade você deseja saber o clima?")
             cidade = ouvir_microfone()
             obter_clima(cidade)
+        elif "tocar música" in comando:
+            falar("Claro! Qual música você gostaria de ouvir?")
+            musica = ouvir_microfone()
+            falar(f"Reproduzindo {musica} no YouTube.")
+            reproduzir_musica(musica)
         else:
             falar("Desculpe, não entendi. Poderia repetir ou fazer outra pergunta?")
             pergunta = ouvir_microfone()
