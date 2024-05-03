@@ -27,4 +27,3 @@ Assistente virtual construído na linguagem **Python**
 * pyttsx3
 * googlesearch-python
 * requests
-* pyaudio
